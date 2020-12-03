@@ -1,3 +1,25 @@
+//user is presented with welcome message telling them to push button 
+//to start quiz  -  create button 
+//when user pushes button, they will be presented with the first question 
+//and the timer function will start countdown - create a timer function + create a startQuiz function(?)
+
+//if user selects the correct answer, they will be presented with the next question
+
+//if user selects the incorrect answer, they will be presented with the next question AND
+// will have 10 seconds taken off their time - is this done in timer or startQuiz function??? if/else
+
+//quiz ends when all four questions are answered or the timer runs out - do I need separate functions or can the 
+// above steps be covered in startQuiz function???
+
+//the user's answers will be stored and they will be given their score at the end of the game 
+
+//user will be able to save their scores and initials, and can be acceseed in "High Scores" 
+
+//each correct answer = 25 points - storeAnswers function for lines 14,16,18?
+
+
+
+
 //Think of the questions you want to ask and multiple answers
 //create basic quiz structure in html & css
 //create interactive elements in javascript 
