@@ -19,7 +19,6 @@
 
 
 
-
 //Think of the questions you want to ask and multiple answers
 //create basic quiz structure in html & css
 //create interactive elements in javascript 
@@ -48,11 +47,21 @@ pTag.textContent = "Press the 'START' button below to begin!";
 document.body.appendChild(pTag);
 pTag.setAttribute("style", "margin:auto; width:50%; textAlign:center; color:green;");
 
+//Create Button -- WORK ON THIS!!!
+
 var startBtn = document.createElement("Button");
 startBtn.textContent = "START";
 document.body.appendChild(startBtn);
 startBtn.setAttribute("style", "padding:10px; margin:auto; textAlign:center; fontSize:24px; backgroundColor:dark green; color:green;");
 startBtn.addEventListener('click', startQuiz());
+
+//Start quiz function
+
+function startQuiz() {
+    if (startBtn === "click") {
+        return question.length[0];
+    }
+}
 
 
 //var startBtn = document.createElement("button");
@@ -68,42 +77,36 @@ startBtn.addEventListener('click', startQuiz());
 
 //LIST QUESTIONS/OPTIIONS/ANSWERS AS AN ARRAY
 var quizQuests = [
-    {question1: "True of False: DOM stands for 'Document Object Model'?", 
-    options: {
-        a: "TRUE", 
-        b: "FALSE", },
-    
-    answer: "a"},
-    
-    {question2: "This is question 2, right?", 
-    options: {
-        a: "option a", 
-        b: "option b", 
-        c: "question 2",
-        d: "option d",
-      },
-      answer: "c"},
 
-    {question3: "This is question 3, right?",
-      answers: {
-        a: "option a", 
-        b: "option b", 
-        c: "option c",
-        d: "question 3",
-      },
-      answer: "d"},
+    {question: "1. True of False: DOM stands for 'Document Object Model'",
+    options: ["TRUE", "FALSE"],
+    answer: 0
+    },
+    
+    {question: "2. What is the maximum amount of items one can have in an array?", 
+    options: ["500", "50", "5000", "unlimited"],
+      answer: 3
+    },
 
-      {question4: "This is question 4, right?",
-      options: {
-        a: "option a", 
-        b: "question 4", 
-        c: "option c",
-        d: "option d",
-      },
-      answer: "b"},
+    {question: "3. This is question 3, right?",
+      options: ["option a",  "option b", "option c", "question 3"],
+      answer: 3
+    },
+
+      {question: "4. This is question 4, right?",
+      options: ["option a", "question 4",  "option c", "option d"],
+      answer: 1
+    },
     ];
 
-    console.log(quizQuests);
+    for (i = 0; i < quizQuests.length; i++) {
+        console.log(question[0]);
+        console.log(question[1]);
+        console.log(question[2]);
+        console.log(question[3]);
+        
+    }
+
 
 //work on this timer
 
@@ -129,7 +132,7 @@ function myTimer() {
 console.log(myTimer);
 
 
-setTime();
+//setTime();
 
 
 function startQuiz() {} 
