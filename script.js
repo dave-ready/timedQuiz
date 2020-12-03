@@ -7,6 +7,15 @@
 //if/else - if (answer === x,y,z, etc.) {....}
 //create a "start quiz" button on the home page
 
+
+//VARIABLES
+
+var mainEl = document.createElement("div")
+document.getElementById ("div");
+//mainEl.textContent = "";
+//document.body.appendChild(mainEl);
+//startBtn.setAttribute("style", backgroundColor: white;");
+
 var h1El = document.createElement("h1");
 h1El.textContent = "Welcome to my quiz!";
 document.body.appendChild(h1El);
@@ -17,12 +26,17 @@ pTag.textContent = "Press the 'START' button below to begin!";
 document.body.appendChild(pTag);
 pTag.setAttribute("style", "margin:auto; width:50%; textAlign:center; color:green;");
 
-
-var startBtn = document.createElement("button");
-//startBtn = document.getElementById("button");
-startBtn.textContent = "Start";
+var startBtn = document.createElement("Button");
+startBtn.textContent = "START";
 document.body.appendChild(startBtn);
-startBtn.setAttribute("style", "textAlign: center; backgroundColor: green;");
+startBtn.setAttribute("style", "padding:10px; margin:auto; textAlign:center; fontSize:24px; backgroundColor:dark green; color:green;");
+startBtn.addEventListener('click', startQuiz());
+
+
+//var startBtn = document.createElement("button");
+//startBtn.textContent = "Start";
+//document.body.appendChild(startBtn);
+//startBtn.setAttribute("style", "textAlign: center; backgroundColor: green;");
 
 //var btnEl = document.createElement("button");
 //btnEl.textContent = <button>Start Quiz</button>;
@@ -69,37 +83,34 @@ var quizQuests = [
 
     console.log(quizQuests);
 
-
-var mainEl = documnet.getElementById ("Main");
-var timerEl = document.getElementById ("countdown")
-var bodyEl = document.getElementById("div");
-
 //work on this timer
 
-var timeEl = document.querySelector(".time");
-var secondsLeft = 20;
 
-function setTime() {
-    var timerInterval = setInterval(function() {
-        secondsLeft--;
-        timeEl.textContent = secondsLeft + " " + "seconds left!!!";
+//var timerEl = document.createElement("quizTimer");
+//timerEl = document.getElementById ("quizTimer");
+//timerEl = document.querySelector("quizTimer");
+//document.body.appendChild(timerEl);
+//timerEl.setAttribute("style", "textAlign:right; Color:red;");
 
+var secondsLeft = 60;
+var time = setInterval(myTimer, 1000);
 
+function myTimer() {
+    document.getElementById('timer').innerHTML = secondsLeft + " " + "seconds left!";
+    secondsLeft--;
     if (secondsLeft === 0) {
-        clearInterval(timerInterval);
-        sendMessage();
-
-       }
-    }, 2000);
-
+        clearInterval(time);
+        alert("Time out!! :(");
+    }
 }
 
-function sendMessage () {
-    timeEl.textContent = "Sorry you are out of time!";
+console.log(myTimer);
 
-    }
 
 setTime();
+
+
+function startQuiz() {} 
 
 
 //DO I EVEN NEED THESE??
@@ -154,5 +165,6 @@ console.log(quest3);
 console.log(quest4);
 console.log(optTrue);
 console.log(optFalse);
+
 
 
