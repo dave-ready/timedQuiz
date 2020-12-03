@@ -55,14 +55,6 @@ document.body.appendChild(startBtn);
 startBtn.setAttribute("style", "padding:10px; margin:auto; textAlign:center; fontSize:24px; backgroundColor:dark green; color:green;");
 startBtn.addEventListener('click', startQuiz());
 
-//Start quiz function
-
-function startQuiz() {
-    if (startBtn === "click") {
-        return question.length[0];
-    }
-}
-
 
 //var startBtn = document.createElement("button");
 //startBtn.textContent = "Start";
@@ -76,36 +68,55 @@ function startQuiz() {
 
 
 //LIST QUESTIONS/OPTIIONS/ANSWERS AS AN ARRAY
+var question1 = "1. True or False: DOM stands for 'Document Object Model'?";
+var question2 = "2. What is the maximum amount of items one can have in an array?";
+var question3 = "3. This is question 3, right?";
+var question4 = "4. This is question 4, right?";
+var options1 = ["TRUE", "FALSE"];
+var options2 = ["500", "50", "5000", "unlimited"];
+var options3 = ["question %",  "question 1", "question c", "question 3"];
+var options4 = ["option a", "question 4",  "option c", "option d"];
+var answer1 =  options1[0];
+var answer2 =  options2[3];
+var answer3 =  options3[3];
+var answer4 =  options4[1];
+
+console.log(answer1);
+console.log(answer2);
+console.log(answer3);
+console.log(answer4);
+
+
+
+
 var quizQuests = [
 
-    {question: "1. True of False: DOM stands for 'Document Object Model'",
-    options: ["TRUE", "FALSE"],
-    answer: 0
-    },
+    {question1, options1: ["TRUE", "FALSE"], answer1: 0 },
     
-    {question: "2. What is the maximum amount of items one can have in an array?", 
-    options: ["500", "50", "5000", "unlimited"],
-      answer: 3
-    },
+    {question2, options2: ["500", "50", "5000", "unlimited items"], answer2: 3 },
 
-    {question: "3. This is question 3, right?",
-      options: ["option a",  "option b", "option c", "question 3"],
-      answer: 3
-    },
+    {question3, options3: ["question %",  "question 1", "question c", "question 3"], answer3: 3 },
 
-      {question: "4. This is question 4, right?",
-      options: ["option a", "question 4",  "option c", "option d"],
-      answer: 1
-    },
+    {question4, options4: ["option a", "question 4",  "option c", "option d"], answer4: 1 },
     ];
 
-    for (i = 0; i < quizQuests.length; i++) {
-        console.log(question[0]);
-        console.log(question[1]);
-        console.log(question[2]);
-        console.log(question[3]);
-        
+    for (i = 0; i < question1.length; i++) {
+        console.log(question1);
     }
+
+    for (i = 0; i < question2.length; i++) {
+        console.log(question2);
+    }
+
+    for (i = 0; i < question3.length; i++) {
+        console.log(question3);
+    }
+
+    for (i = 0; i < question4.length; i++) {
+        console.log(question4);
+    }
+
+    
 
 
 //work on this timer
@@ -134,8 +145,15 @@ console.log(myTimer);
 
 //setTime();
 
+//Start quiz function
 
-function startQuiz() {} 
+function startQuiz() {
+    if (startBtn === "click") {
+        return question1.length[0];
+        
+    }
+
+}
 
 
 //DO I EVEN NEED THESE??
@@ -183,13 +201,12 @@ function startQuiz() {}
 
 console.log(h1El);
 console.log(pTag);
-console.log(nextH1El);
-console.log(quest1);
-console.log(quest2);
-console.log(quest3);
-console.log(quest4);
-console.log(optTrue);
-console.log(optFalse);
-
+//console.log(nextH1El);
+//console.log(quest1);
+//console.log(quest2);
+//console.log(quest3);
+//console.log(quest4);
+//console.log(optTrue);
+//console.log(optFalse);
 
 
