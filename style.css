@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -6,16 +12,36 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background-color: yellowgreen;
 }
 
-.container {
-    color: white;
+#quizContainer {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .btnSet {
-
+    display: grid;
+    gap: 10px;
+    margin: 20px 0;
 }
 
 .btn {
 
+    border: 1px solid black;
+    background-color: grey;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
 }
+
+.startBtn, .nextBtn, .highScoreBtn {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
