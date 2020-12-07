@@ -8,12 +8,13 @@
 </head>
 <body>
 
-<div class= "Container">
+
+<div id= "mainContainer">
 
 
     <div id="quizContainer" class="hide">
 
-        <div id="question1">Question 1</div>
+        <div id="questionOne">Question 1</div>
 
         <div id="optButtons" class="btnSet">
             <button class="btn">Option 1</button>
@@ -22,13 +23,16 @@
             <button class="btn">Option 4</button>
         </div>
 
+        <div id="timer" class="timerClass hide">Time Remaining: <span id="timer"></span></div>
+
     </div>
 
     <div class="controls">
         <button id="startBtn" class="startBtn Btn">START</button>
         <button id="nextBtn" class="nextBtn Btn hide">NEXT</button>
-        <button id="highScores" class="highScoreBtn">HIGH SCORES</button>
     </div>
+
+    <button id="highScores" class="highScoreBtn">HIGH SCORES</button>
     
 </div>
 
